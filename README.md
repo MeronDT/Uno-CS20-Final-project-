@@ -2,7 +2,7 @@
 
 ## Directions
 
-You will be submitting your project to me via GitHub. Your repository![uno-cards](https://user-images.githubusercontent.com/111631008/208502589-db7ea114-3cf4-4299-9ad0-c65d4fcbd3bf.jpg)
+You will be submitting your project to me via GitHub. Your repository!
  needs to include a *README* file (that's me!) that explains how to compile and run your program. Your report as a PDF document must also be included in your repository. This submission needs to happen by the end of the final exam period for our course. For us, that occurs on **Monday (12/19) @ 11:20am**.
 
 This *README* file is written in [Markdown](https://en.wikipedia.org/wiki/Markdown). If you're unfamiliar with this notation, [check out this guide](https://itsfoss.com/markdown-guide/).
