@@ -2,7 +2,8 @@
 
 ## Directions
 
-You will be submitting your project to me via GitHub. Your repository needs to include a *README* file (that's me!) that explains how to compile and run your program. Your report as a PDF document must also be included in your repository. This submission needs to happen by the end of the final exam period for our course. For us, that occurs on **Monday (12/19) @ 11:20am**.
+You will be submitting your project to me via GitHub. Your repository![uno-cards](https://user-images.githubusercontent.com/111631008/208502589-db7ea114-3cf4-4299-9ad0-c65d4fcbd3bf.jpg)
+ needs to include a *README* file (that's me!) that explains how to compile and run your program. Your report as a PDF document must also be included in your repository. This submission needs to happen by the end of the final exam period for our course. For us, that occurs on **Monday (12/19) @ 11:20am**.
 
 This *README* file is written in [Markdown](https://en.wikipedia.org/wiki/Markdown). If you're unfamiliar with this notation, [check out this guide](https://itsfoss.com/markdown-guide/).
 
@@ -11,6 +12,9 @@ Make sure to adhere to the full requirements as stated on [Canvas](https://clpcc
 ## Instructions for Professor
 
 **TODO**
+
+![Uploading uno-cards.jpg…]()
+
 
 If you have played Uno before, this should be somewhat easy to understand, but if not there is some brief Rules explained within the program. Most of the program's user interface will consist of menus. Each menu will list the options with the the number to select them to the left. When entering Values make sure to read the prompts to allow the program to run as smooth as possible.
 
