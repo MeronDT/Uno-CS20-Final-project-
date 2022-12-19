@@ -13,7 +13,9 @@ Make sure to adhere to the full requirements as stated on [Canvas](https://clpcc
 
 **TODO**
 
-![Uploading uno-cards.jpg…]()
+                                                                 ![Uploading uno-cards.jpg…]()
+
+
 
 
 If you have played Uno before, this should be somewhat easy to understand, but if not there is some brief Rules explained within the program. Most of the program's user interface will consist of menus. Each menu will list the options with the the number to select them to the left. When entering Values make sure to read the prompts to allow the program to run as smooth as possible.
