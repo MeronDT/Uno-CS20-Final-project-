@@ -1,115 +1,56 @@
-/*******************************************************************************
- *  Description:
- *      creates a Card object with specified color and value
- *
- *  Input(s):
- *      string c, the desired color for the card that will be made
- *      string v, the desired value for the card that will be made
- *
- *  Output:
- *      creates new Card object
- *
- *  Asymptotic Analysis:
- *  O(1)
-*******************************************************************************/
-Card::Card(string c, string v)
-: color(c), value(v) { }
+#ifndef DEQUE_HPP_
+#define DEQUE_HPP_
 
-/*******************************************************************************
- *  Description:
- *      creates a Card object
- *
- *  Input(s):
- *      NA
- *
- *  Output:
- *      creates new Card object
- *
- *  Asymptotic Analysis:
- *  O(1)
-*******************************************************************************/
-Card::Card()
-: color(""), value("") { }
+#include "DoublyList.hpp"
+#include <iostream>
+using namespace std;
 
-/*******************************************************************************
- *  Description:
- *      Destructor clears memory on the Card objects
- *
- *  Input(s):
- *      NA
- *
- *  Output:
- *      creates new Card object
- *
- *  Asymptotic Analysis:
- *  O(0)
-*******************************************************************************/
-Card::~Card()
-{}
+//Doubly Linked List based circular queue, called a deque, like was discussed in lecture.
+//Circular and has Nodes that link both ways
+//Used to represent the gameDeck in main.cpp (Similar names may have been part of the reasoning why)
 
-/*******************************************************************************
- *  Description:
- *      gives the color of a Card
- *
- *  Input(s):
- *      NA
- *
- *  Output:
- *      string, the color of a card (BLACK, RED, YELLOW, BLUE, or GREEN)
- *
- *  Asymptotic Analysis:
- *  O(1)
-*******************************************************************************/
-string Card::getColor() const{
-	return color;
-}
+template <typename T>
+class Deque: public DoublyList<T>{
+private:
+	struct Node {
+		T value;
+		Node* next;
+		Node* previous;
 
-/*******************************************************************************
- *  Description:
- *      gives the value of a Card
- *
- *  Input(s):
- *      NA
- *
- *  Output:
- *      string, the value of a card (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, REVERSE, SKIP, +2, +4, WILD)
- *
- *  Asymptotic Analysis:
- *  O(1)
-*******************************************************************************/
-string Card::getValue() const{
-	return value;
-}
+		Node(T v = T(), Node* n = nullptr)
+		: value(v), next(n), previous(n) { }
+	};
 
-/*******************************************************************************
- *  Description:
- *      Checks to see if a Card is valid when being comapred to another card. This is done
- *      by looking at the color and values of the two cards. If a card matches the color or value,
- *      or card is BLACK color it will be valid. Within main.cpp used to check if a player can
- *      put a card on the Card pile or not. Card of player is trying to match the card on the pile.
- *
- *  Input(s):
- *      Card c, Card of the player
- *      Card p, Card on the top of the pile.
- *
- *  Output:
- *      string, the color of a card (BLACK, RED, YELLOW, BLUE, or GREEN)
- *
- *  Asymptotic Analysis:
- *  O(1)
-*******************************************************************************/
-bool Card::validCard(Card c, Card p) const{
-	//if color or value matches, or card is black then valid to be played
-	if(c.color == p.color){
-		return true;
-	}
-	else if(c.color == "Black"){
-		return true;
-	}
-	else if(c.value == p.value){
-		return true;
-	}
-	else{
-		return false;
-	}
-}
+	//length of Deque, and header/trailer which keep track of the ends
+	int length;
+	Node* header;
+	Node* trailer;
+
+public:
+	//default constructor
+	Deque();
+	//destructor
+	virtual ~Deque();
+    //return the element at the back of the deque
+    T back() const;
+    //return the element at the front of the deque
+    T front() const;
+    //remove all elements in the deque, reseting to initial state
+    void clear();
+    //remove the front element from the deque
+    void dequeueFront();
+    //remove the back element from the deque
+    void dequeueBack();
+    //add the argument to the back of the deque
+    void enqueueFront(const T&);
+    //add the argument to the back of the deque
+    void enqueueBack(const T&);
+    //return the current length of the queue
+    int getLength() const;
+    //checks if the queue currently empty
+    bool isEmpty() const;
+
+};
+
+#include "Deque.tpp"
+#endif /* DEQUE_HPP_ */
