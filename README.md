@@ -11,6 +11,7 @@ Make sure to adhere to the full requirements as stated on [Canvas](https://clpcc
 ## Instructions for Professor
 
 **TODO**
+
 If you have played Uno before, this should be somewhat easy to understand, but if not there is some brief Rules explination within the program. Most of the program's user interface will be using menu based lists. Each menu will list the options with the the number to select them to the left. When entering Values make sure to read the prompts to allow the program to run as smooth as possible.
 
 There are a few options on the first main menu but the main one is, of course, Play. For those who do not know how to play the game I suggest selecting the rules option first then coming back to play. Once you select this option you will be asked how many COM players you would like, these are just Player objects which will take turns with you included playing a card per turn. Every time it is your turn you will have your hand displayed to you, the cards are always read in this format "Color-value." Just like in normal Uno you need to match the color, match the value, or use a black card to play a card.
